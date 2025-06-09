@@ -146,7 +146,7 @@
 @media (max-width: 640px) {
   .blob-shape {
     filter: blur(30px);
-    opacity: 0.3;
+    opacity: 0.15; /* Reduz ainda mais a opacidade para evitar escurecimento */
   }
 }
 
@@ -334,8 +334,17 @@
 /* Ajustes responsivos adicionais */
 @media (max-width: 640px) {
   .grid-pattern {
-    opacity: 0.3; /* Reduz a opacidade do padrão de grade em dispositivos móveis */
+    opacity: 0.8; /* Aumenta a opacidade do padrão de grade em dispositivos móveis */
     background-size: 15px 15px; /* Grade menor em dispositivos móveis */
+  }
+  
+  /* Melhora a legibilidade em dispositivos móveis */
+  #inicio {
+    background-color: rgba(249, 250, 251, 0.95); /* Fundo semi-transparente claro */
+  }
+  
+  .dark #inicio {
+    background-color: rgba(17, 17, 27, 0.95); /* Fundo semi-transparente escuro */
   }
   
   /* Reduz o tamanho dos botões em dispositivos móveis */
@@ -353,6 +362,11 @@
 @media (max-width: 768px) {
   nav {
     backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Força fundo mais claro em mobile */
+  }
+  
+  .dark nav {
+    background-color: rgba(30, 30, 46, 0.9) !important; /* Força fundo mais claro no dark mode */
   }
 }
 

@@ -273,18 +273,17 @@ const Hero = () => {
                 Entre em Contato
               </a>
             </div>
-            
-            <div className="flex mt-8 sm:mt-12 justify-center md:justify-start space-x-5 sm:space-x-6">
-              <a href="#" className="text-xl sm:text-2xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <div className="flex mt-8 sm:mt-12 justify-center md:justify-start space-x-5 sm:space-x-6">
+              <a href="#" className="text-xl sm:text-2xl hover:text-gray-800 dark:hover:text-gray-200 transition-colors hover-scale">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" className="text-xl sm:text-2xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-xl sm:text-2xl hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover-scale">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="#" className="text-xl sm:text-2xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-xl sm:text-2xl hover:text-blue-500 dark:hover:text-blue-300 transition-colors hover-scale">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="text-xl sm:text-2xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-xl sm:text-2xl hover:text-red-500 dark:hover:text-red-400 transition-colors hover-scale">
                 <i className="fas fa-envelope"></i>
               </a>
             </div>
@@ -298,7 +297,7 @@ const Hero = () => {
                   alt="Foto de Perfil" 
                   className="w-full h-full object-cover rounded-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 dark:to-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 dark:to-black/30 sm:to-black/30 dark:sm:to-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="w-full p-4 sm:p-5 text-center">
                     <p className="text-white font-semibold text-sm sm:text-base">Victor</p>
                   </div>
@@ -788,18 +787,17 @@ const Contact = () => {
                   </div>
                   
                   <div className="pt-3 sm:pt-6">
-                    <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Redes Sociais</h4>
-                    <div className="flex flex-wrap gap-3 sm:gap-4">
-                      <a href="https://github.com/Victor-Gabriel-Barbosa" target="_blank" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Redes Sociais</h4>                    <div className="flex flex-wrap gap-3 sm:gap-4">
+                      <a href="https://github.com/Victor-Gabriel-Barbosa" target="_blank" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-gray-800 hover:text-white dark:hover:bg-gray-600 shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
                         <i className="fab fa-github text-base sm:text-lg"></i>
                       </a>
-                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
+                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
                         <i className="fab fa-linkedin-in text-base sm:text-lg"></i>
                       </a>
-                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
+                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-500 shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
                         <i className="fab fa-twitter text-base sm:text-lg"></i>
                       </a>
-                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
+                      <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:text-white dark:hover:bg-gradient-to-br dark:hover:from-purple-600 dark:hover:via-pink-600 dark:hover:to-orange-500 shadow-md hover:shadow-xl hover:scale-110 transition-all duration-300">
                         <i className="fab fa-instagram text-base sm:text-lg"></i>
                       </a>
                     </div>
@@ -840,18 +838,17 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-center md:text-left">Redes Sociais</h3>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <a href="https://github.com/Victor-Gabriel-Barbosa" target="_blank" className="text-lg sm:text-xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-center md:text-left">Redes Sociais</h3>            <div className="flex justify-center md:justify-start space-x-4">
+              <a href="https://github.com/Victor-Gabriel-Barbosa" target="_blank" className="text-lg sm:text-xl hover:text-gray-800 dark:hover:text-gray-200 transition-colors hover-scale">
                 <i className="fab fa-github"></i>
               </a>
-              <a href="#" className="text-lg sm:text-xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-lg sm:text-xl hover:text-blue-600 dark:hover:text-blue-400 transition-colors hover-scale">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="#" className="text-lg sm:text-xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-lg sm:text-xl hover:text-blue-500 dark:hover:text-blue-300 transition-colors hover-scale">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="text-lg sm:text-xl hover:text-primary-light dark:hover:text-primary-dark transition-colors hover-scale">
+              <a href="#" className="text-lg sm:text-xl hover:text-pink-600 dark:hover:text-pink-400 transition-colors hover-scale">
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
@@ -889,16 +886,15 @@ const ScrollToTop = () => {
       top: 0,
       behavior: 'smooth'
     });
-  };
-  return (
+  };  return (
     <button
       onClick={scrollToTop}
-      className={`fixed right-4 sm:right-6 bottom-4 sm:bottom-6 p-3 sm:p-4 rounded-full bg-primary-light dark:bg-primary-dark text-white shadow-lg shadow-primary-light/20 dark:shadow-primary-dark/20 hover:shadow-xl hover:shadow-primary-light/30 dark:hover:shadow-primary-dark/30 transition-all duration-300 z-50 ${
+      className={`fixed right-4 sm:right-6 bottom-4 sm:bottom-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 text-white shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-300 z-50 flex items-center justify-center hover:scale-105 ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0 pointer-events-none'
       }`}
       aria-label="Voltar ao topo"
     >
-      <i className="fas fa-arrow-up text-sm sm:text-base"></i>
+      <i className="fas fa-chevron-up text-sm sm:text-base"></i>
     </button>
   );
 };
