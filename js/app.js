@@ -522,13 +522,20 @@ const Projects = () => {
         {/* Projetos destacados */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mb-12 sm:mb-16">
           {projects.filter(p => p.featured).map((project, index) => (
-            <div key={index} className="border-gradient p-1 rounded-xl shadow-xl group">
-              <div className="card-glassmorphism rounded-xl overflow-hidden h-full flex flex-col">
-                <div className="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+            <div key={index} className="border-gradient p-1 rounded-xl shadow-xl group">              <div className="card-glassmorphism rounded-xl overflow-hidden h-full flex flex-col">
+                <div className="aspect-video overflow-hidden relative bg-gray-100 dark:bg-dark-700 image-container rounded-t-xl">
                   <img 
                     src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt={project.title}
+                    className="w-full h-full project-image"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      const placeholder = document.createElement('div');
+                      placeholder.className = 'image-placeholder';
+                      placeholder.innerHTML = '<i class="fas fa-image text-4xl mb-2"></i><p class="text-sm">Imagem não encontrada</p>';
+                      e.target.parentElement.appendChild(placeholder);
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4 sm:p-6 w-full">
