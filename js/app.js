@@ -13,13 +13,12 @@ const ThemeToggle = ({ setTheme, theme }) => {
 
   // Retorna o ícone apropriado para o tema atual
   const getThemeIcon = () => {
-    if (theme === 'dark') {
-      return <i className="fas fa-moon text-yellow-300"></i>;
-    } else if (theme === 'light') {
-      return <i className="fas fa-sun text-yellow-500"></i>;
-    } else {
-      return <i className="fas fa-laptop text-blue-400"></i>;
-    }
+    const icons = {
+      dark: <i className="fas fa-moon text-yellow-300"></i>,
+      light: <i className="fas fa-sun text-yellow-500"></i>,
+      system: <i className="fas fa-laptop text-blue-400"></i>
+    };
+    return icons[theme] || icons.system;
   };
 
   const themeOptions = [
@@ -29,7 +28,8 @@ const ThemeToggle = ({ setTheme, theme }) => {
   ];
 
   return (
-    <div className="relative">      {/* Backdrop */}
+    <div className="relative">      
+      {/* Backdrop */}
       {isOpen && (
         <div 
           className="fixed inset-0 z-40 bg-black/10"
@@ -83,11 +83,7 @@ const Navbar = ({ setTheme, theme }) => {
   // Detecta o scroll para alterar a aparência da barra de navegação
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -118,7 +114,8 @@ const Navbar = ({ setTheme, theme }) => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? 'py-2 sm:py-3 bg-white/80 dark:bg-dark-800/90 shadow-lg backdrop-blur-md' : 'py-3 sm:py-5 bg-transparent'
-    }`}>      <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+    }`}>      
+      <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
         <a 
           href="#inicio" 
           className={`text-xl sm:text-2xl font-display font-bold gradient-text ${
@@ -241,7 +238,8 @@ const Navbar = ({ setTheme, theme }) => {
 
 // Componente Hero (Área de Destaque)
 const Hero = () => {
-  return (    <section id="inicio" className="relative min-h-screen flex items-center pt-20 grid-pattern overflow-hidden">
+  return (    
+    <section id="inicio" className="relative min-h-screen flex items-center pt-20 grid-pattern overflow-hidden">
       {/* Formas de fundo */}
       <div className="blob-shape blob-shape-1 hidden sm:block"></div>
       <div className="blob-shape blob-shape-2 hidden sm:block"></div>
@@ -414,11 +412,13 @@ const Skills = () => {
     { name: 'Python', icon: 'fab fa-python', color: 'text-blue-600', level: 70 },
     { name: 'Git', icon: 'fab fa-git-alt', color: 'text-red-500', level: 85 },
     { name: 'Tailwind CSS', icon: 'fas fa-wind', color: 'text-cyan-400', level: 90 },
-    { name: 'MongoDB', icon: 'fas fa-database', color: 'text-green-600', level: 75 },    { name: 'Figma', icon: 'fab fa-figma', color: 'text-purple-400', level: 50 },
+    { name: 'MongoDB', icon: 'fas fa-database', color: 'text-green-600', level: 75 },    
+    { name: 'Figma', icon: 'fab fa-figma', color: 'text-purple-400', level: 50 },
     { name: 'Bootstrap', icon: 'fab fa-bootstrap', color: 'text-purple-600', level: 85 }
   ];
 
-  return (    <section id="habilidades" className="py-16 sm:py-24 bg-gray-50 dark:bg-dark-900 relative overflow-hidden">
+  return (    
+    <section id="habilidades" className="py-16 sm:py-24 bg-gray-50 dark:bg-dark-900 relative overflow-hidden">
       <div className="blob-shape blob-shape-1 opacity-30 top-auto bottom-0 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -505,7 +505,8 @@ const Projects = () => {
     }
   ];
 
-  return (    <section id="projetos" className="py-16 sm:py-24 bg-white dark:bg-dark-800 relative overflow-hidden">
+  return (    
+    <section id="projetos" className="py-16 sm:py-24 bg-white dark:bg-dark-800 relative overflow-hidden">
       <div className="blob-shape blob-shape-3 opacity-20 hidden sm:block"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -668,7 +669,8 @@ const Contact = () => {
     alert('Obrigado! Seu cliente de email será aberto para enviar a mensagem.');
   };
 
-  return (    <section id="contato" className="py-16 sm:py-24 bg-gray-50 dark:bg-dark-900 relative overflow-hidden">
+  return (    
+    <section id="contato" className="py-16 sm:py-24 bg-gray-50 dark:bg-dark-900 relative overflow-hidden">
       <div className="blob-shape blob-shape-2 opacity-20 top-auto bottom-0 right-0 left-auto hidden sm:block"></div>
       <div className="blob-shape blob-shape-1 opacity-20 left-0 top-auto bottom-20 hidden sm:block"></div>
       
@@ -875,11 +877,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
 
     window.addEventListener('scroll', toggleVisibility);
@@ -926,10 +924,7 @@ const App = () => {
       
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
-    } else {
-      // Aplica tema manual
-      root.classList.toggle('dark', theme === 'dark');
-    }
+    } else root.classList.toggle('dark', theme === 'dark'); // Aplica tema manual
   }, [theme]);
 
   return (
